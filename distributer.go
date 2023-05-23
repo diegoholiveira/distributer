@@ -278,6 +278,10 @@ func distribute(portfolio []Position, ranking []string, money float64, prices ma
 
 			continue
 		}
+
+		position.Amount = currentAmount
+
+		balanced = append(balanced, position)
 	}
 
 	for _, position := range portfolio {
